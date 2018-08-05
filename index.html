@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="body-color">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <section class="api-body clearfix">
+            <h2>API Tester</h2>
+            <div class="request-details">
+                <form action="">
+                    <div class = "col-3 clearfix">
+                        <div class="input-group">
+                            <label>Method</label>
+                            <select name="" id="">
+                                <option value="">GET</option>
+                                <option value="">POST</option>
+                                <option value="">PUT</option>
+                                <option value="">DELETE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-9 clearfix">
+                        <div class="input-group">
+                            <label for="">URL</label>
+                            <input type="text" placeholder="http://sampleurl.com/etc">
+                        </div>
+                        <div class="input-group">
+                            <label for="">Query Parameters</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Name">
+                                <span>=</span>
+                                <input type="text" placeholder="Value">
+                            </div>
+                            <button>Add Query</button>
+                        </div>
+                        <div class="input-group">
+                            <label for="">Headers</label>
+                            <div class="input-group">
+                                <select name="" id="">
+                                    <option value="">select header</option>
+                                    <option value="">select header</option>
+                                </select>
+                                <span>:</span>
+                                <input type="text" placeholder="Value">
+                            </div>
+                            <button>Add Header</button>
+                        </div>
+                    </div>
+                    <input type="button" value="Test API" style="width: 100%">
+                </form>
+                <div class="output-container">
+                    <div class="output-heading">
+                        <h2>Output</h2>
+                        <div class="response-details response-type">Response code <span class="code">200</span>
+                        </div>
+                    </div>
+                    <div class="output-data">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
