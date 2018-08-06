@@ -21,37 +21,43 @@
 
         <!-- Add your site or application content here -->
         <section class="api-body clearfix">
-            <h2>API Tester</h2>
+            <h2 class="h2-heading">API Tester</h2>
             <div class="request-details">
-                <form action="">
+                <form class="request-details-form" action="">
                     <div class = "col-3 clearfix">
                         <div class="input-group">
-                            <label>Method</label>
-                            <select name="" id="">
-                                <option value="">GET</option>
-                                <option value="">POST</option>
-                                <option value="">PUT</option>
-                                <option value="">DELETE</option>
+                            <label class="label-margin block">Method</label>
+                            <select name="" id="requestType">
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="PUT">PUT</option>
+                                <option value="DELETE">DELETE</option>
+                                <option value="COPY">COPY</option>
+                                <option value="HEAD">HEAD</option>
+                                <option value="OPTIONS">OPTIONS</option>
+                                <option value="LINK">LINK</option>
+                                <option value="UNLINK">UNLINK</option>
+                                <option value="VIEW">VIEW</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-9 clearfix">
                         <div class="input-group">
-                            <label for="">URL</label>
+                            <label class="block label-margin" for="">URL</label>
                             <input type="text" placeholder="http://sampleurl.com/etc">
                         </div>
                         <div class="input-group">
-                            <label for="">Query Parameters</label>
-                            <div class="input-group">
+                            <label class="label-margin block" for="">Query Parameters</label>
+                            <div class="input-subgroup">
                                 <input type="text" placeholder="Name">
                                 <span>=</span>
                                 <input type="text" placeholder="Value">
                             </div>
-                            <button>Add Query</button>
+                            <input type="button" id="addQuery" class="btn btn--blue" value="Add Query"/>
                         </div>
                         <div class="input-group">
-                            <label for="">Headers</label>
-                            <div class="input-group">
+                            <label class="label-margin block" for="">Headers</label>
+                            <div class="input-subgroup">
                                 <select name="" id="">
                                     <option value="">select header</option>
                                     <option value="">select header</option>
@@ -59,10 +65,10 @@
                                 <span>:</span>
                                 <input type="text" placeholder="Value">
                             </div>
-                            <button>Add Header</button>
+                            <input type="button" class="btn btn--blue" value="Add Header"/>
                         </div>
                     </div>
-                    <input type="button" value="Test API" style="width: 100%">
+                    <input class="btn btn--green" id = "submit-btn" type="button" value="Test API" style="width: 100%">
                 </form>
                 <div class="output-container">
                     <div class="output-heading">
@@ -84,6 +90,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/init-request.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>

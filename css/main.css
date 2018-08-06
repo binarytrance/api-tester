@@ -196,7 +196,94 @@ textarea {
 .clearfix:after {
     clear: both;
 }
+/* Reset CSS ================================================================= */
+/*
+  Ivan Gabriele : http://www.ivangabriele.com/css-reset/
+  v2.5.1 | 20141120
+  License: MIT
+*/
+ 
+html{
+  color: #000;
+  background: #fff;
+}
+html, body, div, span, applet, object, iframe, h5, h6, p, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+input, select, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  /*border: 0;*/
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
 
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+}
+caption, th {
+  text-align: left;
+}
+fieldset, img {
+  border: 0;
+}
+legend {
+  color: #000;
+}
+// ol, ul {
+//   list-style: none;
+// }
+.block {
+    display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+textarea {
+  resize: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+} 
+//removes arrow from datalist
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+/*select {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 7px 30px 7px 2px;
+    cursor: pointer;
+    &::-ms-expand {
+      display: none;
+    }
+}*/
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -289,9 +376,34 @@ textarea {
         page-break-after: avoid;
     }
 }
+.btn {
+    padding: 7px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+}
+.btn--blue {
+    background: blue;
+}
+.btn--green {
+    background: green;
+}
+.input-group {
+    margin-bottom: 30px;
+}
+.input-subgroup {
+    margin-bottom: 15px;
+}
+.label-margin {
+    margin-bottom: 10px;
+}
 .body-color {
     padding: 80px;
     background: aliceblue;
+}
+.request-details-form {
+    margin-bottom: 50px;
 }
 .api-body {
     background: #ffffff;
@@ -310,8 +422,16 @@ textarea {
 }
 .output-heading {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 .output-data {
     border: 1px solid #999;
     min-height: 200px;
+}
+.h2-heading {
+    margin-bottom: 15px;
+}
+input[type="text"], select {
+    padding: 5px 3px;
 }
