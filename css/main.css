@@ -274,16 +274,15 @@ h1, h2, h3, h4 {
 input::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
-/*select {
-  -webkit-appearance: none;
+select {
+/*  -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    padding: 7px 30px 7px 2px;
+    appearance: none;*/
     cursor: pointer;
     &::-ms-expand {
       display: none;
     }
-}*/
+}
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -434,4 +433,10 @@ input::-webkit-calendar-picker-indicator {
 }
 input[type="text"], select {
     padding: 5px 3px;
+}
+.delete {
+    cursor: pointer;
+    border: solid 1px;
+    border-radius: 50%;
+    padding: 4px;
 }

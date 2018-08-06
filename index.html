@@ -48,24 +48,31 @@
                         </div>
                         <div class="input-group">
                             <label class="label-margin block" for="">Query Parameters</label>
-                            <div class="input-subgroup">
-                                <input type="text" placeholder="Name">
-                                <span>=</span>
-                                <input type="text" placeholder="Value">
+                            <div class="input-group--query">
+                                <div class="input-subgroup query-group" data-serial="1" id="queryGroup-1">
+                                    <input type="text" placeholder="Name">
+                                    <span>=</span>
+                                    <input type="text" placeholder="Value">
+                                    <span class="delete">X</span>
+                                </div>
                             </div>
                             <input type="button" id="addQuery" class="btn btn--blue" value="Add Query"/>
                         </div>
                         <div class="input-group">
                             <label class="label-margin block" for="">Headers</label>
-                            <div class="input-subgroup">
-                                <select name="" id="">
-                                    <option value="">select header</option>
-                                    <option value="">select header</option>
-                                </select>
-                                <span>:</span>
-                                <input type="text" placeholder="Value">
+                            <div class="input-group--header">
+                                <div class="input-subgroup header-group" data-serial="1" id="headerGroup-1">
+                                    <select name="" id="">
+                                        <option value="">select header</option>
+                                        <option value="">select header</option>
+                                    </select>
+                                    <span>:</span>
+                                    <input type="text" placeholder="Value">
+                                    <span class="delete">X</span>
+                                </div>
                             </div>
-                            <input type="button" class="btn btn--blue" value="Add Header"/>
+                            
+                            <input type="button" class="btn btn--blue" id="addHeader" value="Add Header"/>
                         </div>
                     </div>
                     <input class="btn btn--green" id = "submit-btn" type="button" value="Test API" style="width: 100%">
