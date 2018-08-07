@@ -44,15 +44,15 @@
                     <div class="col-9 clearfix">
                         <div class="input-group">
                             <label class="block label-margin" for="">URL</label>
-                            <input type="text" placeholder="http://sampleurl.com/etc">
+                            <input style="width: 100%;" type="text" id="queryURL" placeholder="http://sampleurl.com/etc">
                         </div>
                         <div class="input-group">
                             <label class="label-margin block" for="">Query Parameters</label>
                             <div class="input-group--query">
                                 <div class="input-subgroup query-group" data-serial="1" id="queryGroup-1">
-                                    <input type="text" placeholder="Name">
+                                    <input type="text" placeholder="Name" class="query-key" id='queryKey-1'>
                                     <span>=</span>
-                                    <input type="text" placeholder="Value">
+                                    <input type="text" placeholder="Value" class="query-value" id="queryValue-1">
                                     <span class="delete">X</span>
                                 </div>
                             </div>
@@ -62,12 +62,14 @@
                             <label class="label-margin block" for="">Headers</label>
                             <div class="input-group--header">
                                 <div class="input-subgroup header-group" data-serial="1" id="headerGroup-1">
-                                    <select name="" id="">
-                                        <option value="">select header</option>
-                                        <option value="">select header</option>
+                                    <select name="" class="header-key" id="headerKey-1">
+                                        <option value="">select a header</option>
+                                        <option value="X-Mashape-Key">X-Mashape-Key</option>
+                                        <option value="Accept">Accept</option>
+                                        <option value="Content-Type">Content-Type</option>
                                     </select>
                                     <span>:</span>
-                                    <input type="text" placeholder="Value">
+                                    <input type="text" placeholder="Value" class="header-value" id="headerValue-1">
                                     <span class="delete">X</span>
                                 </div>
                             </div>
