@@ -138,6 +138,7 @@
 				}
 				else {
 					queryUrl = queryUrl + "&" + property + "=" + queryObj[property];
+					console.log(queryUrl);
 				}
 
 			}
@@ -156,20 +157,30 @@
 	}
 
 	function outputFunction() {
-		try {
+		// try {
 			if(httpRequest.readyState === XMLHttpRequest.DONE) {
 				statusCode = httpRequest.status;
+				// document.getElementsByClassName("code")[0].text(statusCode);
+				console.log(statusCode)
 				if(statusCode === 200) {
 					alert(httpRequest.responseText);
+					var responseJSON = httpRequest.responseText;
+					console.log(responseJSON);
+					var beautJSON = JSON.stringify(responseJSON, undefined, 4);
+					console.log(beautJSON)
+					document.getElementsByClassName("output-data")[0].innerHTML += beautJSON;
+					// for(var property in responseJSON) {
+					// 	console.log(property);
+					// }
 				}
 				else {
 					alert("There was a problem with the request.");
 				}
 			}
-		}
-		catch(e) {
-			alert("Caught Exception: " + e.description);
-		}
+		// }
+		// catch(e) {
+		// 	alert("Caught Exception: " + e.description);
+		// }
 	}
 })();
 
