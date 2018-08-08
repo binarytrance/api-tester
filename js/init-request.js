@@ -20,22 +20,21 @@
 	// $("#addQuery").on("click", function(e) {
 	// 	e.preventDefault();
 	// })
-
+	// adds event handler and execution function for adding new query fields
 	addQueryButton.addEventListener("click", addNewQuery);
+	// adds event handler and execution function for adding new headers
 	addHeaderButton.addEventListener("click", addNewHeader);
-	// delete functionality
+	// delete functionality also adds click eevent listener to newly created fields
 	function addClickEvent() {
 		for(var i = 0; i < deleteButton.length; i++) {
 			console.log(deleteButton[i]);
-			deleteButton[i].addEventListener("click", deleteNode)
+			deleteButton[i].addEventListener("click", deleteNode);
 		}
 	}
 	
 	// deleteButton.addEventListener("click", deleteNode);
 
 	function deleteNode() {
-		console.log(90990)
-		console.log(this.parentNode)
 		this.parentNode.remove();
 	}
 
@@ -44,9 +43,7 @@
 		// console.log(document.getElementById("queryGroup-1").length);
 		if(queryInput) {
 			var queryGroupLength = queryGroup.length;
-			console.log(queryGroupLength, queryGroup[queryGroupLength - 1]);
 			var lastElement = queryGroup[queryGroupLength - 1].dataset.serial;
-			console.log(lastElement);
 			idVal = lastElement;
 			idVal++;
 		}
@@ -54,7 +51,6 @@
 			idVal = 1;
 			queryInput = queryInput1;
 		}
-		console.log(idVal);
 		var queryClone = queryInput.cloneNode(true);
 		queryClone.id = "queryGroup-" + idVal;
 		queryClone.getElementsByClassName("query-key")[0].id = "queryKey-" + idVal;
@@ -62,7 +58,6 @@
 		queryClone.getElementsByClassName("query-value")[0].id = "queryValue-" + idVal;
 		queryClone.getElementsByClassName("query-value")[0].value = "";
 		queryClone.dataset.serial = idVal;
-		console.log(queryClone);
 		document.getElementsByClassName("input-group--query")[0].appendChild(queryClone);
 		addClickEvent();
 	}
@@ -82,7 +77,6 @@
 			idVal = 1;
 			headerInput = headerInput1;
 		}
-		console.log(idVal);
 		var headerClone = headerInput.cloneNode(true);
 		headerClone.id = "headerGroup-" + idVal;
 		headerClone.getElementsByClassName("header-key")[0] = "headerKey-" + idVal;
@@ -110,12 +104,19 @@
 			var queryKey = document.getElementsByClassName("query-key")[i].value;
 			var queryVal = document.getElementsByClassName("query-value")[i].value;
 			// queryArr.push(queryKeys[i].value);
-			queryObj[queryKey] = queryVal;
+			// add key value pairs only when theres data in the input fields
+			if(queryKey != "" && queryVal != "") {
+				queryObj[queryKey] = queryVal;
+			}
 		}
+		// run a loop through all header groups and store them in an object
 		for(var i = 0; i < headerGroup.length; i++) {
 			var headerKey = document.getElementsByClassName("header-key")[i].value;
 			var headerValue = document.getElementsByClassName("header-value")[i].value;
-			headerObj[headerKey] = headerValue;
+			// add key value pairs only when theres data in the input fields
+			if(headerKey != "" && headerVal != "") {
+				headerObj[headerKey] = headerValue;
+			}
 		}
 		console.log(queryObj);
 		console.log(headerObj);
@@ -143,10 +144,13 @@
 		}
 		// assigning a reference of the function outputFunction to onreadystatechange of the object
 		httpRequest.onreadystatechange = outputFunction;
-		httpRequest.open(requestType, queryUrl);
-		for(var property in headerObj) {
+		httpRequest.open(requestType, queryUrl, headerObj);
+		if(headerObj != {}) {
+			for(var property in headerObj) {
 			httpRequest.setRequestHeader(property, headerObj[property]);
 		}
+		}
+		
 		
 		httpRequest.send();
 	}
