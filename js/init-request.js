@@ -93,6 +93,7 @@
 		// empties the object (used to store query parameters) everytime you click on test api
 		var queryObj = {};
 		var headerObj = {};
+		document.getElementsByClassName("output-data")[0].innerHTML = "";
 		var queryUrl = document.getElementById("queryURL").value;
 		console.log(queryUrl);
 		requestType = document.getElementById("requestType").value;
@@ -114,7 +115,7 @@
 			var headerKey = document.getElementsByClassName("header-key")[i].value;
 			var headerValue = document.getElementsByClassName("header-value")[i].value;
 			// add key value pairs only when theres data in the input fields
-			if(headerKey != "" && headerVal != "") {
+			if(headerKey != "" && headerValue != "") {
 				headerObj[headerKey] = headerValue;
 			}
 		}
@@ -160,15 +161,15 @@
 		// try {
 			if(httpRequest.readyState === XMLHttpRequest.DONE) {
 				statusCode = httpRequest.status;
-				// document.getElementsByClassName("code")[0].text(statusCode);
+				document.getElementsByClassName("code")[0].innerHTML = statusCode;
 				console.log(statusCode)
 				if(statusCode === 200) {
-					alert(httpRequest.responseText);
+					// alert(httpRequest.responseText);
 					var responseJSON = httpRequest.responseText;
 					console.log(responseJSON);
 					var beautJSON = JSON.stringify(responseJSON, undefined, 4);
 					console.log(beautJSON)
-					document.getElementsByClassName("output-data")[0].innerHTML += beautJSON;
+					document.getElementsByClassName("output-data")[0].innerHTML = beautJSON;
 					// for(var property in responseJSON) {
 					// 	console.log(property);
 					// }
