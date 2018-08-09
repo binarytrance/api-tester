@@ -165,11 +165,17 @@
 				console.log(statusCode)
 				if(statusCode === 200) {
 					// alert(httpRequest.responseText);
-					var responseJSON = httpRequest.responseText;
-					console.log(responseJSON);
-					var beautJSON = JSON.stringify(responseJSON, undefined, 4);
+					var responseJSONObject = JSON.parse(httpRequest.responseText);
+					var responseJSONString = httpRequest.responseText;
+					// console.log(responseJSONString);
+					responseJSONObject.forEach(function(obj) {
+						console.log(obj);
+					})
+					// console.log(typeof responseJSONString)
+					var beautJSON = JSON.stringify(responseJSONObject, undefined, 4);
 					console.log(beautJSON)
 					document.getElementsByClassName("output-data")[0].innerHTML = beautJSON;
+
 					// for(var property in responseJSON) {
 					// 	console.log(property);
 					// }

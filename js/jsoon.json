@@ -1,0 +1,327 @@
+[
+    {
+        "artist_id": 426,
+        "artist_mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "artist_name": "Eminem",
+        "artist_name_translation": [],
+        "artist_comment": "",
+        "artist_country": "US",
+        "artist_alias": [
+            "えみねむ",
+            "Ominem",
+            "The Real Slim Shady"
+        ],
+        "artist_rating": 95,
+        "primary_genres": {
+            "music_genre": [
+                {
+                    "music_genre_id": 18,
+                    "music_genre_parent_id": 34,
+                    "music_genre_name": "Hip Hop/Rap",
+                    "music_genre_name_extended": "Hip Hop/Rap",
+                    "music_genre_vanity": "Hip-Hop-Rap"
+                }
+            ]
+        },
+        "secondary_genres": {
+            "music_genre": []
+        },
+        "artist_twitter_url": "https://twitter.com/eminem",
+        "artist_vanity_id": "Eminem",
+        "artist_edit_url": "https://www.musixmatch.com/artist/Eminem?utm_source=application&utm_campaign=api&utm_medium=mxm%3A1409607470331",
+        "artist_share_url": "https://www.musixmatch.com/artist/Eminem",
+        "artist_credits": {
+            "artist": []
+        },
+        "restricted": false,
+        "managed": 0,
+        "updated_time": "2014-05-28T14:19:26Z"
+    },
+    {
+        "artist_id": 57568,
+        "artist_mbid": "87f27b14-cbd0-44ea-93a3-6fead5cb45e7",
+        "artist_name": "Bad Meets Evil",
+        "artist_name_translation": [
+            {
+                "language": "JA",
+                "translation": "バッド・ミーツ・イヴィル"
+            }
+        ],
+        "artist_comment": "",
+        "artist_country": "US",
+        "artist_alias": [
+            "バッド・ミーツ・イヴィル",
+            "Eminem & Royce 5’9",
+            "Bad Meets Evil (Eminem and Royce 5-9)",
+            "Eminem & Royce DA 5-9",
+            "Bad Meets Evil (Eminem & Royce Da 5'9'')",
+            "Eminem & Royce DA 59",
+            "Royce da 5'9\" & Eminem"
+        ],
+        "artist_rating": 61,
+        "primary_genres": {
+            "music_genre": [
+                {
+                    "music_genre_id": 18,
+                    "music_genre_parent_id": 34,
+                    "music_genre_name": "Hip Hop/Rap",
+                    "music_genre_name_extended": "Hip Hop/Rap",
+                    "music_genre_vanity": "Hip-Hop-Rap"
+                }
+            ]
+        },
+        "secondary_genres": {
+            "music_genre": []
+        },
+        "artist_twitter_url": "",
+        "artist_vanity_id": "Bad-Meets-Evil",
+        "artist_edit_url": "https://www.musixmatch.com/artist/Bad-Meets-Evil?utm_source=application&utm_campaign=api&utm_medium=mxm%3A1409607470331",
+        "artist_share_url": "https://www.musixmatch.com/artist/Bad-Meets-Evil",
+        "artist_credits": {
+            "artist": []
+        },
+        "restricted": false,
+        "managed": 0,
+        "updated_time": "2015-11-26T22:25:19Z"
+    },
+    {
+        "artist_id": 13812293,
+        "artist_mbid": "0d3dafc5-2ca6-4363-a960-047a9df01d9e",
+        "artist_name": "Eminem feat. Rihanna",
+        "artist_name_translation": [],
+        "artist_comment": "",
+        "artist_country": "",
+        "artist_alias": [],
+        "artist_rating": 54,
+        "primary_genres": {
+            "music_genre": []
+        },
+        "secondary_genres": {
+            "music_genre": []
+        },
+        "artist_twitter_url": "",
+        "artist_vanity_id": "Eminem-feat-Rihanna",
+        "artist_edit_url": "https://www.musixmatch.com/artist/Eminem-feat-Rihanna?utm_source=application&utm_campaign=api&utm_medium=mxm%3A1409607470331",
+        "artist_share_url": "https://www.musixmatch.com/artist/Eminem-feat-Rihanna",
+        "artist_credits": {
+            "artist": [
+                {
+                    "artist_id": 426,
+                    "artist_mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+                    "artist_name": "Eminem",
+                    "artist_name_translation": [],
+                    "artist_comment": "",
+                    "artist_country": "US",
+                    "artist_alias": [
+                        "えみねむ",
+                        "Ominem",
+                        "The Real Slim Shady"
+                    ],
+                    "artist_rating": 95,
+                    "primary_genres": {
+                        "music_genre": [
+                            {
+                                "music_genre_id": 18,
+                                "music_genre_parent_id": 34,
+                                "music_genre_name": "Hip Hop/Rap",
+                                "music_genre_name_extended": "Hip Hop/Rap",
+                                "music_genre_vanity": "Hip-Hop-Rap"
+                            }
+                        ]
+                    },
+                    "secondary_genres": {
+                        "music_genre": []
+                    },
+                    "artist_twitter_url": "https://twitter.com/eminem",
+                    "artist_vanity_id": "Eminem",
+                    "artist_edit_url": "https://www.musixmatch.com/artist/Eminem?utm_source=application&utm_campaign=api&utm_medium=mxm%3A1409607470331",
+                    "artist_share_url": "https://www.musixmatch.com/artist/Eminem",
+                    "artist_credits": {
+                        "artist": []
+                    },
+                    "restricted": false,
+                    "managed": 0,
+                    "updated_time": "2014-05-28T14:19:26Z"
+                },
+                {
+                    "artist_id": 33491890,
+                    "artist_mbid": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+                    "artist_name": "Rihanna",
+                    "artist_name_translation": [
+                        {
+                            "language": "JA",
+                            "translation": "リアーナ"
+                        }
+                    ],
+                    "artist_comment": "",
+                    "artist_country": "US",
+                    "artist_alias": [
+                        "リアーナ",
+                        "蕾哈娜",
+                        "Rhianna",
+                        "Riannah",
+                        "Robyn Rihanna Fenty",
+                        "Rihanna"
+                    ],
+                    "artist_rating": 91,
+                    "primary_genres": {
+                        "music_genre": [
+                            {
+                                "music_genre_id": 14,
+                                "music_genre_parent_id": 34,
+                                "music_genre_name": "Pop",
+                                "music_genre_name_extended": "Pop",
+                                "music_genre_vanity": "Pop"
+                            },
+                            {
+                                "music_genre_id": 18,
+                                "music_genre_parent_id": 34,
+                                "music_genre_name": "Hip Hop/Rap",
+                                "music_genre_name_extended": "Hip Hop/Rap",
+                                "music_genre_vanity": "Hip-Hop-Rap"
+                            }
+                        ]
+                    },
+                    "secondary_genres": {
+                        "music_genre": []
+                    },
+                    "artist_twitter_url": "https://twitter.com/rihanna",
+                    "artist_vanity_id": "Rihanna",
+                    "artist_edit_url": "https://www.musixmatch.com/artist/Rihanna?utm_source=application&utm_campaign=api&utm_medium=mxm%3A1409607470331",
+                    "artist_share_url": "https://www.musixmatch.com/artist/Rihanna",
+                    "artist_credits": {
+                        "artist": []
+                    },
+                    "restricted": false,
+                    "managed": 0,
+                    "updated_time": "2017-04-28T23:18:48Z"
+                }
+            ]
+        },
+        "restricted": false,
+        "managed": 0,
+        "updated_time": "2015-12-09T16:27:07Z"
+    },
+    {
+        "artist_id": 34921044,
+        "artist_mbid": "",
+        "artist_name": "Eminem feat. Ed Sheeran",
+        "artist_name_translation": [],
+        "artist_comment": "",
+        "artist_country": "",
+        "artist_alias": [],
+        "artist_rating": 60,
+        "primary_genres": {
+            "music_genre": []
+        },
+        "secondary_genres": {
+            "music_genre": []
+        },
+        "artist_twitter_url": "",
+        "artist_vanity_id": "Eminem-feat-Ed-Sheeran",
+        "artist_edit_url": "https://www.musixmatch.com/artist/Eminem-feat-Ed-Sheeran?utm_source=application&utm_campaign=api&utm_medium=mxm%3A1409607470331",
+        "artist_share_url": "https://www.musixmatch.com/artist/Eminem-feat-Ed-Sheeran",
+        "artist_credits": {
+            "artist": [
+                {
+                    "artist_id": 426,
+                    "artist_mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+                    "artist_name": "Eminem",
+                    "artist_name_translation": [],
+                    "artist_comment": "",
+                    "artist_country": "US",
+                    "artist_alias": [
+                        "えみねむ",
+                        "Ominem",
+                        "The Real Slim Shady"
+                    ],
+                    "artist_rating": 95,
+                    "primary_genres": {
+                        "music_genre": [
+                            {
+                                "music_genre_id": 18,
+                                "music_genre_parent_id": 34,
+                                "music_genre_name": "Hip Hop/Rap",
+                                "music_genre_name_extended": "Hip Hop/Rap",
+                                "music_genre_vanity": "Hip-Hop-Rap"
+                            }
+                        ]
+                    },
+                    "secondary_genres": {
+                        "music_genre": []
+                    },
+                    "artist_twitter_url": "https://twitter.com/eminem",
+                    "artist_vanity_id": "Eminem",
+                    "artist_edit_url": "https://www.musixmatch.com/artist/Eminem?utm_source=application&utm_campaign=api&utm_medium=mxm%3A1409607470331",
+                    "artist_share_url": "https://www.musixmatch.com/artist/Eminem",
+                    "artist_credits": {
+                        "artist": []
+                    },
+                    "restricted": false,
+                    "managed": 0,
+                    "updated_time": "2014-05-28T14:19:26Z"
+                },
+                {
+                    "artist_id": 33111847,
+                    "artist_mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+                    "artist_name": "Ed Sheeran",
+                    "artist_name_translation": [
+                        {
+                            "language": "JA",
+                            "translation": "エド・シーラン"
+                        }
+                    ],
+                    "artist_comment": "",
+                    "artist_country": "GB",
+                    "artist_alias": [
+                        "エド・シーラン",
+                        "ai de xi lan",
+                        "Ed shiran"
+                    ],
+                    "artist_rating": 98,
+                    "primary_genres": {
+                        "music_genre": [
+                            {
+                                "music_genre_id": 14,
+                                "music_genre_parent_id": 34,
+                                "music_genre_name": "Pop",
+                                "music_genre_name_extended": "Pop",
+                                "music_genre_vanity": "Pop"
+                            },
+                            {
+                                "music_genre_id": 1289,
+                                "music_genre_parent_id": 34,
+                                "music_genre_name": "Folk",
+                                "music_genre_name_extended": "Folk",
+                                "music_genre_vanity": "Folk"
+                            },
+                            {
+                                "music_genre_id": 1063,
+                                "music_genre_parent_id": 10,
+                                "music_genre_name": "Contemporary Folk",
+                                "music_genre_name_extended": "Singer/Songwriter / Contemporary Folk",
+                                "music_genre_vanity": "Singer-Songwriter-Contemporary-Folk"
+                            }
+                        ]
+                    },
+                    "secondary_genres": {
+                        "music_genre": []
+                    },
+                    "artist_twitter_url": "https://twitter.com/edsheeran",
+                    "artist_vanity_id": "Ed-Sheeran",
+                    "artist_edit_url": "https://www.musixmatch.com/artist/Ed-Sheeran?utm_source=application&utm_campaign=api&utm_medium=mxm%3A1409607470331",
+                    "artist_share_url": "https://www.musixmatch.com/artist/Ed-Sheeran",
+                    "artist_credits": {
+                        "artist": []
+                    },
+                    "restricted": false,
+                    "managed": 0,
+                    "updated_time": "2018-05-13T11:24:52Z"
+                }
+            ]
+        },
+        "restricted": false,
+        "managed": 0,
+        "updated_time": "2017-12-15T05:00:39Z"
+    }
+]
