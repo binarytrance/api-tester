@@ -250,9 +250,9 @@ fieldset, img {
 legend {
   color: #000;
 }
-// ol, ul {
-//   list-style: none;
-// }
+ ol, ul {
+   list-style: none;
+}
 .block {
     display: block;
 }
@@ -440,3 +440,60 @@ input[type="text"], select {
     border-radius: 50%;
     padding: 4px;
 }
+li {
+    list-style: none;
+    float: left;
+    clear:  both;
+}
+li[data-hasobjasvalue] {
+    max-height:22px;
+    overflow:hidden;
+}
+.objValue {
+    padding-left: 20px;
+    cursor: pointer;
+    color: #999 !important;
+}
+.objValue:hover {
+    color: #666 !important;
+}
+.objValue:before {
+    position: absolute;
+    content:  "\25BA" ;
+    left: 0;
+}
+.new-object{
+    position: relative;
+    width: auto;
+    overflow: auto;
+    float: left;
+    clear: both;
+}
+.new-object:before{
+    position: absolute;;
+    content:"{";
+    left:0;
+    top:0;
+}
+.value {
+    position: relative;
+    color: orange;
+    width:200px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+.new-object:after{
+    position: absolute;
+    content:"}";
+    right:0; 
+    bottom:0;
+}
+.open-state {
+    max-height: 1800px !important;
+}
+.open-state div:first-child .objValue:before {
+    content: "\25BC";
+    }

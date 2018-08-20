@@ -165,16 +165,21 @@
 				console.log(statusCode)
 				if(statusCode === 200) {
 					// alert(httpRequest.responseText);
+					var outputContainer = document.getElementsByClassName("output-data")[0]
+					var oneAboveAll = document.createElement("div");
+					oneAboveAll.id = "output-list-wrapper"
+					outputContainer.appendChild(oneAboveAll);
 					var responseJSONObject = JSON.parse(httpRequest.responseText);
-					var responseJSONString = httpRequest.responseText;
+					parseJSON(responseJSONObject);
+					// var responseJSONString = httpRequest.responseText;
 					// console.log(responseJSONString);
-					responseJSONObject.forEach(function(obj) {
-						console.log(obj);
-					})
+					// responseJSONObject.forEach(function(obj) {
+					// 	console.log(obj);
+					// })
 					// console.log(typeof responseJSONString)
 					var beautJSON = JSON.stringify(responseJSONObject, undefined, 4);
 					console.log(beautJSON)
-					document.getElementsByClassName("output-data")[0].innerHTML = beautJSON;
+					// document.getElementsByClassName("output-data")[0].innerHTML = beautJSON;
 
 					// for(var property in responseJSON) {
 					// 	console.log(property);
@@ -189,5 +194,90 @@
 		// 	alert("Caught Exception: " + e.description);
 		// }
 	}
+	function parseJSON(json, recursive) {
+		console.log("first key: ", json[0]);
+	  
+		if(typeof json[0] === "object") {
+			console.log("first keys of ", json, " is an object")
+			json.forEach(function(obj, index) {
+				parseObj(obj, recursive);
+				console.log("end of obj=====================")
+			})
+	  	}
+	  	else {
+			console.log("first key is not an object");
+			parseObj(json, recursive);
+	  	}
+	}
+
+	// loop through each object
+	function parseObj(obj, recursive) {
+		// create ul for each object encountered
+	 	console.log(recursive)
+	  	var newUl = document.createElement("ul");
+		newUl.className = "new-object";
+		// console.log(oneAboveAll);
+		// console.log(newUl);
+		if(recursive === true) {
+			console.log("recursive")
+			var objValueNodes = document.querySelectorAll("[data-hasobjasvalue]");
+			console.log(objValueNodes.length);
+			objValueNodes[objValueNodes.length - 1].appendChild(newUl);
+		}
+		else{
+			document.getElementById("output-list-wrapper").appendChild(newUl);		
+		}
+	  
+		for(var property in obj) {
+				// get key : value pair of each object
+			var objProperty = property;
+			var objValue = obj[objProperty];
+			console.log("property", objProperty, "value", objValue);
+			if(typeof objValue == "object") {
+				
+				console.log(objValue, "is an obj")
+				var objValueStr = JSON.stringify(objValue);
+				var keyWithOValue = `<li data-hasObjAsValue="true"><div><span class='property'>` +
+									objProperty +
+									`: </span><span class="value">` + objValueStr +
+									`</span></div></li>`;
+									// var lastUl = document.getElementById("output-list-wrapper").lastChild;
+									 var lastUl = document.getElementsByClassName("new-object")[document.getElementsByClassName("new-object").length - 1];
+
+									lastUl.innerHTML += keyWithOValue;
+				parseJSON(objValue, true);
+			}
+			else {
+
+				var simpleKeyValue = `<li><div><span class='property'>` + objProperty +
+						`: </span><span class="value">` + objValue +
+						`</span></div></li>`;
+				var lastUl = document.getElementsByClassName("new-object")[document.getElementsByClassName("new-object").length - 1];
+				console.log(lastUl);
+				lastUl.innerHTML += simpleKeyValue;
+				
+			}
+		}
+	}
+	// expand object on click
+var valuesAsObj = document.querySelectorAll("[data-hasobjasvalue]")
+console.log( valuesAsObj);
+for(var i = 0; i < valuesAsObj.length; i++) {
+	// console.log(event)
+	  valuesAsObj[i].addEventListener("click", function(e){
+	   console.log(this);
+	   e.stopPropagation(); // so as not to target parents inadvertently
+	   if(this.classList.contains("open-state"))
+	   {
+	   	console.log(this.getElementsByClassName("objValue")[0].classList)
+	   		this.getElementsByClassName("objValue")[0].classList = "value objValue  hello";
+	   	 	this.classList = "clearfix";
+	   }
+	   else {
+	   	this.classList = "clearfix open-state"
+	   }
+	   
+ })
+}
 })();
 
