@@ -477,7 +477,7 @@ li[data-hasobjasvalue] {
 }
 .value {
     position: relative;
-    color: orange;
+    color: purple;
     width:200px;
     display: inline-block;
     text-overflow: ellipsis;
@@ -494,6 +494,13 @@ li[data-hasobjasvalue] {
 .open-state {
     max-height: 1800px !important;
 }
-.open-state div:first-child .objValue:before {
+.active-arrow:before {
     content: "\25BC";
-    }
+}
+#output-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.response-success {
+  color: green;
+}

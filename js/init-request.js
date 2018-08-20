@@ -164,6 +164,7 @@
 				document.getElementsByClassName("code")[0].innerHTML = statusCode;
 				console.log(statusCode)
 				if(statusCode === 200) {
+					document.getElementById("response-details").classList = "response-success"
 					// alert(httpRequest.responseText);
 					var outputContainer = document.getElementsByClassName("output-data")[0]
 					var oneAboveAll = document.createElement("div");
@@ -171,14 +172,15 @@
 					outputContainer.appendChild(oneAboveAll);
 					var responseJSONObject = JSON.parse(httpRequest.responseText);
 					parseJSON(responseJSONObject);
+					expansion();
 					// var responseJSONString = httpRequest.responseText;
 					// console.log(responseJSONString);
 					// responseJSONObject.forEach(function(obj) {
 					// 	console.log(obj);
 					// })
 					// console.log(typeof responseJSONString)
-					var beautJSON = JSON.stringify(responseJSONObject, undefined, 4);
-					console.log(beautJSON)
+					// var beautJSON = JSON.stringify(responseJSONObject, undefined, 4);
+					// console.log(beautJSON)
 					// document.getElementsByClassName("output-data")[0].innerHTML = beautJSON;
 
 					// for(var property in responseJSON) {
@@ -215,7 +217,7 @@
 		// create ul for each object encountered
 	 	console.log(recursive)
 	  	var newUl = document.createElement("ul");
-		newUl.className = "new-object";
+		newUl.className = "new-object clearfix";
 		// console.log(oneAboveAll);
 		// console.log(newUl);
 		if(recursive === true) {
@@ -237,9 +239,9 @@
 				
 				console.log(objValue, "is an obj")
 				var objValueStr = JSON.stringify(objValue);
-				var keyWithOValue = `<li data-hasObjAsValue="true"><div><span class='property'>` +
+				var keyWithOValue = `<li class="clearfix" data-hasObjAsValue="true"><div><span class='property'>` +
 									objProperty +
-									`: </span><span class="value">` + objValueStr +
+									`: </span><span class="value objValue">` + objValueStr +
 									`</span></div></li>`;
 									// var lastUl = document.getElementById("output-list-wrapper").lastChild;
 									 var lastUl = document.getElementsByClassName("new-object")[document.getElementsByClassName("new-object").length - 1];
@@ -249,7 +251,7 @@
 			}
 			else {
 
-				var simpleKeyValue = `<li><div><span class='property'>` + objProperty +
+				var simpleKeyValue = `<li class="clearfix"><div><span class='property'>` + objProperty +
 						`: </span><span class="value">` + objValue +
 						`</span></div></li>`;
 				var lastUl = document.getElementsByClassName("new-object")[document.getElementsByClassName("new-object").length - 1];
@@ -259,25 +261,37 @@
 			}
 		}
 	}
+
+function expansion() {
 	// expand object on click
-var valuesAsObj = document.querySelectorAll("[data-hasobjasvalue]")
-console.log( valuesAsObj);
-for(var i = 0; i < valuesAsObj.length; i++) {
-	// console.log(event)
-	  valuesAsObj[i].addEventListener("click", function(e){
-	   console.log(this);
-	   e.stopPropagation(); // so as not to target parents inadvertently
-	   if(this.classList.contains("open-state"))
-	   {
-	   	console.log(this.getElementsByClassName("objValue")[0].classList)
-	   		this.getElementsByClassName("objValue")[0].classList = "value objValue  hello";
-	   	 	this.classList = "clearfix";
-	   }
-	   else {
-	   	this.classList = "clearfix open-state"
-	   }
-	   
- })
-}
+	var valuesAsObj = document.querySelectorAll("[data-hasobjasvalue]")
+	console.log( valuesAsObj);
+	for(var i = 0; i < valuesAsObj.length; i++) {
+		// console.log(event)
+		valuesAsObj[i].addEventListener("click", function(e){
+			console.log(this);
+			e.stopPropagation(); // so as not to target parents inadvertently
+			if(this.classList.contains("open-state"))
+			{
+				console.log(this.getElementsByClassName("objValue")[0].classList)
+				this.getElementsByClassName("objValue")[0].classList = "value objValue";
+				this.classList = "clearfix";
+				// remove open state from internal elements with open-state class
+				var insideOpenStates = this.getElementsByClassName("open-state");
+				for(var i = 0; i < insideOpenStates.length; i++) {
+					// insideOpenStates.
+					console.log(insideOpenStates[i]);
+					insideOpenStates[i].classList = "clearfix";
+					this.getElementsByClassName("active-arrow")[i].classList = "value objValue";
+				}
+			}
+			else {
+					this.classList = "clearfix open-state"
+					this.getElementsByClassName("objValue")[0].classList = "value objValue active-arrow";
+			}
+	 	})
+	}
+};
+
 })();
 
