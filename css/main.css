@@ -504,3 +504,6 @@ li[data-hasobjasvalue] {
 .response-success {
   color: green;
 }
+#response-details {
+  display: none;
+}

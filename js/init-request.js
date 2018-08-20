@@ -164,6 +164,7 @@
 				document.getElementsByClassName("code")[0].innerHTML = statusCode;
 				console.log(statusCode)
 				if(statusCode === 200) {
+					document.getElementById("response-details").style.display = "block";
 					document.getElementById("response-details").classList = "response-success"
 					// alert(httpRequest.responseText);
 					var outputContainer = document.getElementsByClassName("output-data")[0]
